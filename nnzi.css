@@ -1,0 +1,9 @@
+.box {
+    height: 555px;
+    width: 258px;
+    background-color: pink;
+}
+
+.box img {
+    width: 100%;
+}
