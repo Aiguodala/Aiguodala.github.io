@@ -1,0 +1,19 @@
+.size {
+    width: 267px;
+    height: 317px;
+    background-color: pink;
+    background-image: url(nannanzi.jpg);
+    background-repeat: no-repeat;
+    line-height: 317px;
+    font-size: xx-large;
+    text-align: center;
+    text-decoration: none;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: silver;
+}
