@@ -15,7 +15,7 @@
     float: left;
     width: 257px;
     height: 700px;
-    background-color: black;
+    background-color: grey;
 }
 
 a {
@@ -25,7 +25,7 @@ a {
     font-size: larger;
     text-decoration: none;
     text-indent: 2em;
-    color: white;
+    color: red;
     margin-top: 20px;
 }
 
