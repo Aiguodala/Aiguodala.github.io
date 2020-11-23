@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+    <link rel="stylesheet" href="to do list.css">
+</head>
+
+<body>
+    <p id="p1">李博洋的 To Do List</p>
+    <input type="text" id='inputText' value=" 输入任务">
+    <button id="btn">+</button>
+    <p id="p2">添加的任务</p>
+    <div id="task"></div>
+    <script>
+        var inputText = document.querySelector('input');
+        var btn = document.getElementById('btn');
+        var task = document.getElementById('task');
+        var btn1 = task.getElementsByClassName('btn1');
+        var a = new Array();
+        inputText.onfocus = function() {
+            if (this.value === ' 输入任务') {
+                this.value = '';
+            }
+            this.style.color = 'black';
+        }
+        inputText.onblur = function() {
+            if (this.value === '') {
+                this.value = ' 输入任务';
+            }
+            this.style.color = 'lightgray';
+        }
+
+        function add(obj) {
+            task.innerHTML += '<div>' + obj.value + '<button class= \"btn1\">×</button>' + '<div>';
+
+            obj.value = '';
+        }
+
+        function deleteButton(obj) {
+            obj.parentNode.remove();
+        }
+        btn.onclick = function() {
+            add(inputText);
+            for (var i = 0; i < btn1.length; i++) {
+                btn1[i].onclick = function() {
+                    deleteButton(this);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
